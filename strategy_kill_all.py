@@ -76,13 +76,13 @@ def main(state):
                             ],
                      name="KILL ALL", state=state, log=False)
 
-  for i in range(127):
+  for i in range(125):
     iterate_and_return(steps=[(1, "succ", 1),],
                        name="KILL ALL", state=state, log=False)
 
-  #slot[1] = 255
+  #slot[1] = 253
 
-  i = 255
+  i = 253
   while True:
     for j in range(121):
       iterate_and_return(steps=[(2, 2, "zero"),
