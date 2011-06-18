@@ -23,11 +23,11 @@ def print_step(name, who, arg1, arg2, arg3):
   sys.stderr.flush()
 
 
-def do_step(arg1, arg2, arg3, name=None, state=None):
+def do_step(arg1, arg2, arg3, name=None, state=None, log=False):
   global counter
   counter += 1
   sys.stdout.write("%s\n%s\n%s\n" % (str(arg1), str(arg2), str(arg3)))
-  if name is not None:
+  if name is not None and log:
     print_step(name, state, arg1, arg2, arg3)
   sys.stdout.flush()
 

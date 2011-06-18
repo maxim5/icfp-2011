@@ -63,11 +63,11 @@ def main(state):
                             (2, 1, "zero"),
                             (1, "succ", 1),
                            ],
-                     name="BEST", state=state)
+                     name="KILL ALL", state=state)
   iterate_in_loop(steps=[(2, 2, "zero"),
                          (2, 2, "zero"),
                          (1, "get", 2),],
-                  name="BEST", state=state)
+                  name="KILL ALL", state=state)
 
 
 if __name__ == "__main__":
