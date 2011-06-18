@@ -64,7 +64,25 @@ def main(state):
                            ],
                      name="KILL ALL", state=state, log=False)
 
-  i = 0
+  
+  iterate_and_return(steps=[(1, "succ", 1),#1
+                            (1, "dbl", 1), #2
+                            (1, "dbl", 1), #4
+                            (1, "dbl", 1), #8
+                            (1, "dbl", 1), #16
+                            (1, "dbl", 1), #32
+                            (1, "dbl", 1), #64
+                            (1, "dbl", 1), #128
+                            ],
+                     name="KILL ALL", state=state, log=False)
+
+  for i in range(127):
+    iterate_and_return(steps=[(1, "succ", 1),],
+                       name="KILL ALL", state=state, log=False)
+
+  #slot[1] = 255
+
+  i = 255
   while True:
     for j in range(121):
       iterate_and_return(steps=[(2, 2, "zero"),
@@ -72,7 +90,7 @@ def main(state):
                                 (1, "get", 2),],
                          name="KILL ALL", state=state, log=False)
 
-    if i > 255: 
+    if i >= 255: 
      #reset slot[1] to 0
       iterate_and_return(steps=[(1, "put", 1),
                                 (2, 1, "zero"),],
