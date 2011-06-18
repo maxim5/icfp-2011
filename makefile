@@ -6,6 +6,7 @@ dist:
 	mkdir .dist
 	mkdir .dist/src
 	touch .dist/install
+	echo "#!/bin/sh\nexit 0" > .dist/install
 	chmod a+x .dist/install
 	cp $(SOLUTION) .dist/run
 	cp lib.py .dist/
