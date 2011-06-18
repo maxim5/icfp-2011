@@ -39,7 +39,7 @@ def main(state):
                          (1, "S", 0),
                          (2, 0, "I"),
                          (2, 0, "zero")],
-                  name="DUMB", state=state)
+                  name="KILL0", state=state)
 
 
 if __name__ == "__main__":
