@@ -39,6 +39,13 @@ def read_oppenent():
 
 
 
+def iterate_and_return(steps, name=None, state=None):
+  global counter
+  for step in steps:
+    do_step(step[0], step[1], step[2], name=name, state=state)
+    read_oppenent()
+
+
 def iterate_in_loop(steps, name=None, state=None):
   global counter
   while True:
