@@ -6,7 +6,7 @@ from lib import run, iterate_in_loop
 
 
 def main(state):
-  iterate_in_loop(steps=[(1, "I", 0)], name="DUMB", state=state)
+  iterate_in_loop(steps=[(1, "I", 0)], name="DUMB", state=state, log=False)
 
 
 if __name__ == "__main__":
