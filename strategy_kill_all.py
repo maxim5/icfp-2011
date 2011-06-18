@@ -64,15 +64,25 @@ def main(state):
                            ],
                      name="KILL ALL", state=state, log=False)
 
-  for i in range(256):
-    for i in range(121):
+  i = 0
+  while True:
+    for j in range(121):
       iterate_and_return(steps=[(2, 2, "zero"),
                                 (2, 2, "zero"),
                                 (1, "get", 2),],
                          name="KILL ALL", state=state, log=False)
 
-    iterate_and_return(steps=[(1, "succ", 1),],
-                       name="KILL ALL", state=state, log=False)
+    if i > 255: 
+     #reset slot[1] to 0
+      iterate_and_return(steps=[(1, "put", 1),
+                                (2, 1, "zero"),],
+                         name="KILL ALL", state=state, log=False)
+      i = 0
+    else:
+     #inc slot[1] 
+      iterate_and_return(steps=[(1, "succ", 1),],
+                         name="KILL ALL", state=state, log=False)
+      i = i + 1
 
 
 if __name__ == "__main__":
