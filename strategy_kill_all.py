@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 __author__ = "maxim"
 
-from lib import run, iterate_and_return, iterate_in_loop
+from lib import run, iterate_and_return
 
 
 __doc__ = """
@@ -29,7 +29,7 @@ __doc__ = """
 1 succ 1
 // slot[1] = 1
 2 2 zero
-//отняли 83 vitality от слота (255-get(slot[1])) противника, теперь slot[2] = I
+//-83 vitality (255-get(slot[1])), slot[2] = I
 //copy slot[0] to slot[2]:
 2 2 zero
 1 get 2
