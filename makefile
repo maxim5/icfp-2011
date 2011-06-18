@@ -11,5 +11,4 @@ dist:
 	cp $(SOLUTION) .dist/run
 	cp lib.py .dist/
 	cd .dist && tar pczvf ../solution.tar.gz *
-#	tar -pczvf solution.tar.gz .dist/*
 
