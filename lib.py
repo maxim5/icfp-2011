@@ -39,18 +39,18 @@ def read_oppenent():
 
 
 
-def iterate_and_return(steps, name=None, state=None):
+def iterate_and_return(steps, name=None, state=None, log=False):
   global counter
   for step in steps:
-    do_step(step[0], step[1], step[2], name=name, state=state)
+    do_step(step[0], step[1], step[2], name=name, state=state, log=log)
     read_oppenent()
 
 
-def iterate_in_loop(steps, name=None, state=None):
+def iterate_in_loop(steps, name=None, state=None, log=False):
   global counter
   while True:
     if counter >= 100000:
       return
     step = steps[counter % len(steps)]
-    do_step(step[0], step[1], step[2], name=name, state=state)
+    do_step(step[0], step[1], step[2], name=name, state=state, log=log)
     read_oppenent()
