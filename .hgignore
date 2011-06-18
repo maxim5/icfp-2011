@@ -2,3 +2,6 @@ syntax: glob
 
 ltg*
 *.pyc
+.dist
+*.tar.gz
+

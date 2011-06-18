@@ -5,6 +5,9 @@ import sys
 
 
 def run(main):
+  if len(sys.argv) == 1:
+    print "ICFP 2011 solution. Mandatory argument 0 or 1"
+    return
   state = sys.argv[1]
   if state == "1":
     read_oppenent()
